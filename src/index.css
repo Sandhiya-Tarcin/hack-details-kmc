@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+:root {
+  /* Pure black background for that premium look in 2nd image */
+  background-color: #000000;
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  /* Grid lines-ah innum subtle-ah and wide-ah mathiruken */
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 70px 70px; /* Reference image maari wide grid */
+}
+
+/* Custom Selection Color - Blue accent maari */
+::selection {
+  background-color: rgba(59, 130, 246, 0.3);
+  color: white;
+}
+
+/* Scrollbar styling - Dark theme-ku yethamari */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #3b82f6;
+}
