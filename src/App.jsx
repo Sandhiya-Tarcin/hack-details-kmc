@@ -9,6 +9,7 @@ import Timeline from "./components/Timeline";
 import Milestones from "./components/Milestones"; 
 import EvaluationCriteria from "./components/EvaluationCriteria"; 
 import Judges from "./components/Judges"; 
+import VideoGallery from "./components/VideoGallery"; 
 
 import ScrollToTop from "./components/ScrollToTop"; 
 
@@ -18,18 +19,32 @@ function App() {
       <Navbar />
 
       <main className="overflow-x-hidden flex flex-col">
+        {/* Hero & About Sections */}
         <section id="home"><Hero /></section>
         <section id="about"><About /></section>
+
+        {/* VIDEO HIGHLIGHTS SECTION - NEWLY ADDED */}
+        <section id="highlights">
+          <VideoGallery />
+        </section>
+        
+        {/* Event Details */}
         <section id="timeline"><Timeline /></section>
         <section id="evaluation"><EvaluationCriteria /></section>
+        
+        {/* Participants & Experts */}
         <section id="teams"><Teams /></section>
-        <section id="Judges"><Judges /></section>
+        <section id="judges"><Judges /></section>
+        
+
+        {/* Categories & History */}
         <section id="departments"><Departments /></section>
         <section id="milestones"><Milestones /></section>
       </main>
 
       <Footer />
       
+      {/* Scroll to Top Utility */}
       <ScrollToTop />
     </div>
   );

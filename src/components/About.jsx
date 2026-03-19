@@ -64,7 +64,7 @@ export default function About() {
             <p className="text-slate-600 leading-relaxed text-lg max-w-4xl">
               Tech Challenge- 2k25 is a premier Hackathon organized by 
               <span className="font-bold text-slate-800"> Kamaraj College of Engineering and Technology (Autonomous), Madurai</span>, 
-              in collaboration with <span className="text-[#004aad] font-bold">Tarcin Robotics</span>. 
+              in collaboration with <span className="text-[#004aad] font-bold">Tarcin</span>. 
               Our mission is to foster a culture of innovation among engineering students, 
               empowering them to build real-time solutions for industry-scale problems.
             </p>
