@@ -32,7 +32,7 @@ const ScrollToTop = () => {
           onClick={scrollToTop}
           className="bg-blue-600 hover:bg-blue-500 text-white p-3 rounded-full shadow-lg shadow-blue-500/30 transition-all duration-300 hover:scale-110 active:scale-95 animate-bounce"
         >
-          {/* Arrow Icon - screenshot-la irukkura athe maari */}
+          
           <ArrowUp size={24} strokeWidth={3} />
         </button>
       )}

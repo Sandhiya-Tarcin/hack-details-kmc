@@ -10,42 +10,80 @@ import Milestones from "./components/Milestones";
 import EvaluationCriteria from "./components/EvaluationCriteria"; 
 import Judges from "./components/Judges"; 
 import VideoGallery from "./components/VideoGallery"; 
-
 import ScrollToTop from "./components/ScrollToTop"; 
 
 function App() {
   return (
-    <div className="bg-black min-h-screen antialiased selection:bg-blue-500/40 selection:text-white">
-      <Navbar />
-
-      <main className="overflow-x-hidden flex flex-col">
-        {/* Hero & About Sections */}
-        <section id="home"><Hero /></section>
-        <section id="about"><About /></section>
-
-        {/* VIDEO HIGHLIGHTS SECTION - NEWLY ADDED */}
-        <section id="highlights">
-          <VideoGallery />
-        </section>
-        
-        {/* Event Details */}
-        <section id="timeline"><Timeline /></section>
-        <section id="evaluation"><EvaluationCriteria /></section>
-        
-        {/* Participants & Experts */}
-        <section id="teams"><Teams /></section>
-        <section id="judges"><Judges /></section>
-        
-
-        {/* Categories & History */}
-        <section id="departments"><Departments /></section>
-        <section id="milestones"><Milestones /></section>
-      </main>
-
-      <Footer />
+    <div className="relative min-h-screen antialiased selection:bg-blue-500/40 selection:text-white">
       
-      {/* Scroll to Top Utility */}
-      <ScrollToTop />
+      {/* 🟢 STEP 1: VIDEO LAYER (Fixed & Sharp) */}
+      <div className="fixed inset-0 z-0 w-full h-full overflow-hidden">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          preload="auto"
+          className="w-full h-full object-cover"
+        >
+          <source src="/videos/animation6.mp4" type="video/mp4" />
+        </video>
+        
+        
+        <div className="absolute inset-0 bg-white/5 z-0" />
+      </div>
+
+     
+      <div className="relative z-10 isolate">
+        
+       
+        <style dangerouslySetInnerHTML={{ __html: `
+          section, main { background-color: transparent !important; }
+        ` }} />
+
+        <main className="w-full"> 
+          <Navbar />
+
+          <section id="home">
+            <Hero />
+          </section>
+
+          <section id="about">
+            <About />
+          </section>
+
+          <section id="highlights">
+            <VideoGallery />
+          </section>
+          
+          <section id="timeline">
+            <Timeline />
+          </section>
+
+          <section id="evaluation">
+            <EvaluationCriteria />
+          </section>
+          
+          <section id="teams">
+            <Teams />
+          </section>
+
+          <section id="judges">
+            <Judges />
+          </section>
+          
+          <section id="departments">
+            <Departments />
+          </section>
+
+          <section id="milestones">
+            <Milestones />
+          </section>
+        </main>
+
+        <Footer />
+        <ScrollToTop />
+      </div>
     </div>
   );
 }

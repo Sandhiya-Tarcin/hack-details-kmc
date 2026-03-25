@@ -1,104 +1,73 @@
-import React from "react";
-import { Youtube, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
-import tarcinlogo from "../assets/tarcinblue.png";
+import React from 'react';
+import tarcinLogo from '../assets/tarcinblue.png';
 
-export default function Footer() {
+
+const Footer = () => {
   return (
-    <footer className="bg-[#0a1a3a] text-gray-300 pt-16 pb-8">
+    <footer className="bg-black text-white py-12 px-4 font-sans border-t border-gray-900">
+      <div className="max-w-6xl mx-auto flex flex-col items-center">
+        
+<div className="flex flex-wrap justify-center items-center gap-8 mb-10">
+  <img 
+    src={tarcinLogo} 
+    alt="Tarcin Robotics Logo" 
+    className="h-10 md:h-12 w-auto object-contain" 
+  />
+  
+</div>
 
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-10">
-
-        {/* LOGO + ABOUT */}
-        <div>
-          <img
-            src={tarcinlogo}
-            className="h-14 mb-4"
-            alt="Tarcin Logo"
-          />
-
-          <p className="text-sm leading-relaxed text-gray-400">
-            Empowering students with robotics, AI and emerging technologies.
-            Building innovators through practical learning and real-world projects.
+        {/* Main Title Section */}
+        <div className="text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-black tracking-[0.2em] mb-2">TECH CHALLENGE-2K25</h2>
+          <div className="h-1 w-20 bg-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-400 text-sm md:text-base tracking-wide uppercase">
+            Department of Computer Science |Kamaraj College of Engineering and Technology , Madurai
           </p>
+        </div>
 
-          <div className="flex gap-4 mt-6">
-            <a href="https://www.youtube.com/@TarcinRobotic" target="_blank" rel="noopener noreferrer">
-              <Youtube size={20} className="hover:text-white cursor-pointer"/>
-            </a>
-            <a href="https://www.instagram.com/tarcin_robotic/" target="_blank" rel="noopener noreferrer">
-              <Instagram size={20} className="hover:text-white cursor-pointer"/>
-            </a>
-            <a href="https://www.linkedin.com/company/tarcin-robotic-llp/?originalSubdomain=in" target="_blank" rel="noopener noreferrer">
-              <Linkedin size={20} className="hover:text-white cursor-pointer"/>
-            </a>
+        {/* Credentials Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 text-center w-full max-w-5xl mb-12 border-b border-gray-800 pb-12">
+          <div className="space-y-2">
+            <h3 className="text-blue-500 font-bold text-xs uppercase tracking-[0.15em]">Principal</h3>
+            <p className="font-semibold text-lg text-gray-100">Dr.S.Senthil, M.E.,Ph.D.,</p>
+          </div>
+
+          <div className="space-y-2">
+            <h3 className="text-blue-500 font-bold text-xs uppercase tracking-[0.15em]">Head of Department</h3>
+            <div className="space-y-1">
+              <p className="font-semibold text-lg text-gray-100">Dr.A.Meenakshi, M.E., Ph.D.,</p>
+              <p className="font-medium text-md text-gray-400"> Prof & Head</p>
+            </div>
+          </div>
+
+          <div className="space-y-2">
+            <h3 className="text-blue-500 font-bold text-xs uppercase tracking-[0.15em]">Coordinators</h3>
+            <div className="space-y-1">
+              <p className="font-semibold text-lg text-gray-100">Mrs.S.Athilakshmi,AP-CSE</p>
+              <p className="font-semibold text-lg text-gray-100">Ms.S.Janani,AP-CSE</p>
+              <p className="font-semibold text-lg text-gray-100">Mr.S.Ram Prasath,AP-CSE</p>
+            </div>
           </div>
         </div>
 
-        {/* QUICK LINKS */}
-        <div>
-          <h3 className="text-white font-semibold mb-4">Quick Links</h3>
-          <ul className="space-y-3 text-sm">
-            <li className="hover:text-white cursor-pointer"><a href="#home">Home</a></li>
-            <li className="hover:text-white cursor-pointer"><a href="#about">About</a></li>
-            <li className="hover:text-white cursor-pointer"><a href="#videos">Events</a></li>
-            <li className="hover:text-white cursor-pointer"><a href="#teams">Teams</a></li>
-            <li className="hover:text-white cursor-pointer"><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-
-        {/* PROGRAMS */}
-        <div>
-          <h3 className="text-white font-semibold mb-4">Programs</h3>
-          <ul className="space-y-3 text-sm">
-            <li className="hover:text-white cursor-pointer">Robotics</li>
-            <li className="hover:text-white cursor-pointer">Artificial Intelligence</li>
-            <li className="hover:text-white cursor-pointer">Embedded Systems</li>
-            <li className="hover:text-white cursor-pointer">IoT Projects</li>
-          </ul>
-        </div>
-
-        {/* CONTACT */}
-        <div>
-          <h3 className="text-white font-semibold mb-4">Contact</h3>
-
-          <div className="space-y-4 text-sm">
-
-            <div className="flex gap-3">
-              <MapPin size={18}/>
-              <p>
-                176, E 6th Street, <br/>
-                K K Nagar, Madurai - 625020 <br/>
-                India
-              </p>
-            </div>
-
-            <div className="flex gap-3">
-              <Phone size={18}/>
-              <p>
-                +91 98846 75586 <br/>
-                +91 80723 55711 <br/>
-                Mon - Fri, 9am - 6pm
-              </p>
-            </div>
-
-            <div className="flex gap-3">
-              <Mail size={18}/>
-              <p>
-                contact@tarcinrobotic.in <br/>
-                hr@tarcinrobotic.in
-              </p>
-            </div>
-
+        {/* Bottom Collaboration Text */}
+        <div className="text-center space-y-3">
+          <p className="text-gray-400 text-xs md:text-sm tracking-wide">
+            In Collaboration with <span className="text-white">Tarcin </span> | Institution Innovation Council (IIC)
+          </p>
+          <p className="text-gray-400 text-xs md:text-sm tracking-wide">
+            KCET, Madurai — 25 Years of Excellence
+          </p>
+          <div className="pt-6">
+            <p className="text-gray-600 text-[10px] uppercase tracking-widest">
+              All Rights Reserved.
+            </p>
           </div>
         </div>
 
       </div>
-
-      {/* BOTTOM */}
-      <div className="border-t border-gray-700 mt-12 pt-6 text-center text-sm text-gray-400">
-        © {new Date().getFullYear()} Tarcin Robotics LLP. All Rights Reserved.
-      </div>
-
     </footer>
   );
-}
+};
+
+export default Footer;
